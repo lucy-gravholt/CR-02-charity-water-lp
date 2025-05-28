@@ -2,18 +2,198 @@
 
 Primary Colors:
 - Yellow:     #FFC907
-- Blue:       #2E9DF7
+- Blue:       #003366
 
 Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
+- White: #fefefe
+- Off-White: #fff7e1
+- Black: 1a1a1a
 
 Fonts:
 - Proxima Nova
 - Avenir
 
 */
+body {
+  margin: 0;
+  font-family: 'Avenir', 'Proxima Nova', sans-serif;
+  background-color: #fefefe;
+  color: #fff7e1;
+}
+
+header {
+  background-color: #fefefe;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  color: #1a1a1a;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 1.2rem
+}
+
+/* make the nav-separator black and evenly spaced */
+nav a::after {
+  content: '|';
+  margin-left: 25px;
+  color: #1a1a1a;
+}
+
+.hero {
+  display: flex;
+  flex-direction: row;
+  background-color: #003366;
+  padding-left: 5rem ;
+  padding-right: 0rem
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #fff7e1;
+}
+
+.hero-text {
+  flex: 1 1 100%;
+  max-width: 520px;
+  padding-top: 5rem;
+}
+
+.hero-text h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  font-weight: 250
+}
+
+.hero-text p {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.cta-button {
+  background-color: #FFC907;
+  color: #1a1a1a;
+  padding: 0.75rem 2rem;
+  border: none;
+  font-weight: 100;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 25px; /* Increased for a rounder button */
+  margin-top: 1.2rem;
+  margin-bottom: 2rem
+}
+
+/* Style for the hero image container */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+  margin-top: 0rem;
+}
+
+/* Make the hero image smaller */
+.hero-image img {
+  max-width: 675px; /* Set a smaller maximum width */
+  width: 100%;      /* Make image responsive */
+  height: auto;     /* Keep image aspect ratio */
+}
+/* move the hero image all the way to the right */
+.hero-image img {
+  margin-right: 0; /* Remove any right margin */
+}
+
+@media (max-width: 767px) {
+   .hero-text p {
+    font-size: 1rem;
+    max-width: 200px
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    margin-top: 0.3rem;
+  }
+
+  .hero-image img {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+ /* adjust header for smaller screens */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+ 
+  /* adjust nav links for smaller screens */
+  nav a {
+    margin-left: 10px;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  /* adjust hero section for smaller screens */
+  .hero {
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 0rem;
+    text-align: left;
+  }
+  .hero-text {
+    max-width: 100%;
+    padding-top: 2rem;
+  } 
+  .hero {
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 0rem;
+    text-align: left;
+  }
+  .hero {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+    max-width: 200px;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    max-width: 200px;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    margin-top: 0.3rem;
+  }
+/* Adjust hero image for smaller screens */ 
+  .hero-image {
+    flex: 1;
+    margin-top: 0;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+}
+

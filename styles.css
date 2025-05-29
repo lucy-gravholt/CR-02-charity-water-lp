@@ -17,8 +17,8 @@ Fonts:
 body {
   margin: 0;
   font-family: 'Avenir', 'Proxima Nova', sans-serif;
-  background-color: #fefefe;
-  color: #fff7e1;
+  background-color: #003366 
+  
 }
 
 header {
@@ -113,6 +113,15 @@ nav a::after {
   margin-right: 0; /* Remove any right margin */
 }
 
+/* style "the water crisis" section with a blue background and white text */
+.water-crisis {
+  background-color: #003366;
+  color: #fff7e1;
+  padding: 2rem;
+  text-align: center;
+}
+
+
 @media (max-width: 767px) {
    .hero-text p {
     font-size: 1rem;
@@ -154,7 +163,8 @@ nav a::after {
   }
   .hero-text {
     max-width: 100%;
-    padding-top: 2rem;
+    padding-top: 1rem;
+    padding-left: 0.75rem
   } 
   .hero {
     flex-direction: column;
@@ -193,7 +203,7 @@ nav a::after {
   }
 
   .hero-image img {
-    max-width: 100%;
+    max-width: 140%;
   }
 }
 

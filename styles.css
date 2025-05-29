@@ -195,6 +195,16 @@ section:not(:first-of-type) .cta-button {
   border-radius: 25px;      /* Rounded corners */
 }
 
+/*style the footer */
+footer {
+  background-color: #003366; /* Charity: Water blue */
+  color: #fff7e1;            /* Off-white text */
+  padding: 2rem;
+  text-align: left;
+  font-size: 0.7rem;
+  margin-top: 3rem;
+}
+
 
 
 @media (max-width: 767px) {

@@ -13,11 +13,13 @@ Fonts:
 - Proxima Nova
 - Avenir
 
-*/
+/* Remove the background, border-radius, and box-shadow from the hero section */
+/* Add this to your CSS file */
+
 body {
   margin: 0;
   font-family: 'Avenir', 'Proxima Nova', sans-serif;
-  background-color: #003366 
+  background-color: #faf8f3 
   
 }
 
@@ -56,7 +58,7 @@ nav a::after {
   display: flex;
   flex-direction: row;
   background-color: #003366;
-  padding-left: 5rem ;
+  padding-left: 8rem ;
   padding-right: 0rem
   align-items: center;
   justify-content: space-between;
@@ -72,12 +74,12 @@ nav a::after {
 
 .hero-text h1 {
   font-size: 4.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem;;
   font-weight: 250
 }
 
 .hero-text p {
-  margin-bottom: 1rem;
+  margin-bottom: 2.5rem;
   font-size: 1.5rem;
 }
 
@@ -90,8 +92,9 @@ nav a::after {
   font-size: 1.3rem;
   cursor: pointer;
   border-radius: 25px; /* Increased for a rounder button */
-  margin-top: 1.2rem;
+  margin-top: 3rem;
   margin-bottom: 2rem
+  
 }
 
 /* Style for the hero image container */
@@ -104,7 +107,7 @@ nav a::after {
 
 /* Make the hero image smaller */
 .hero-image img {
-  max-width: 675px; /* Set a smaller maximum width */
+  max-width: 700px; /* Set a smaller maximum width */
   width: 100%;      /* Make image responsive */
   height: auto;     /* Keep image aspect ratio */
 }
@@ -113,13 +116,85 @@ nav a::after {
   margin-right: 0; /* Remove any right margin */
 }
 
-/* style "the water crisis" section with a blue background and white text */
-.water-crisis {
-  background-color: #003366;
-  color: #fff7e1;
+/*bring back the bubbles around each section except the first section */
+section:not(:first-of-type) {
+  background-color: #fff7e1; /* Off-white background */
   padding: 2rem;
-  text-align: center;
+  margin-top: 3rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  border-radius: 25px; /* Rounded corners */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
+
+/* Style for section headings except in the first section */
+section:not(:first-of-type) h2 {
+  color: #003366;            /* Charity: Water blue */
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+}
+
+/* Style for section subheadings except in the first section */
+section:not(:first-of-type) h3 {
+  color: #1a1a1a;            /* Dark text */
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+}
+
+/* Style for section paragraphs except in the first section */
+/* This will style all <p> elements inside sections except the first section */
+section:not(:first-of-type) p {
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+  font-family: Montserrat, sans-serif; /* Use font-family to set the font */
+}
+
+
+/* Style for lists in sections except in the first section */
+section:not(:first-of-type) ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left: 3rem;
+ font-family: Montserrat, sans-serif; /* Use font-family to set the font */
+}
+
+section:not(:first-of-type) li {
+  margin-bottom: 0.5rem;
+  margin-left: 3rem;
+  font-size: 1.1rem;
+  
+}
+
+/* Style for the cta-button in all sections except the first section */
+section:not(:first-of-type) .cta-button {
+  background-color: #FFC907; /* Yellow background */
+  color: #1a1a1a;            /* Dark text */
+  padding: 0.75rem 2rem;    /* Padding for the button */
+  border: none;
+  font-weight: 200;
+  font-size: 1.5rem;         /* Font size for the button */
+  cursor: pointer;
+  border-radius: 25px;      /* Rounded corners */
+  margin-top: 2rem;         /* Margin on top */
+  margin-left: 3rem;
+}
+
+/* make the cta-buttons a smaller size in all sections except in the first section */
+section:not(:first-of-type) .cta-button {
+  background-color: #FFC907; /* Yellow background */
+  color: #1a1a1a;            /* Dark text */
+  padding: 0.5rem 1.5rem;   /* Smaller padding */
+  border: none;
+  font-weight: 150;
+  font-size: 1.2rem;           /* Smaller font size */
+  cursor: pointer;
+  border-radius: 25px;      /* Rounded corners */
+}
+
 
 
 @media (max-width: 767px) {
@@ -157,14 +232,14 @@ nav a::after {
   /* adjust hero section for smaller screens */
   .hero {
     flex-direction: column;
-    padding-left: 1rem;
+    padding-left: 1.5rem;
     padding-right: 0rem;
     text-align: left;
   }
   .hero-text {
     max-width: 100%;
     padding-top: 1rem;
-    padding-left: 0.75rem
+    padding-left: 1rem
   } 
   .hero {
     flex-direction: column;
@@ -206,4 +281,88 @@ nav a::after {
     max-width: 140%;
   }
 }
+
+/* center the nav links on smaller screens */
+@media (max-width: 767px) {
+  nav {
+    justify-content: center;
+  }
+  
+  nav a {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* Make the main sections responsive for phones */
+/* This code helps the Water Crisis, Our Impact, Get Involved, and Donate sections look good on small screens */
+
+@media (max-width: 767px) {
+  /* Make section bubbles use less space on phones */
+  section:not(:first-of-type) {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 1rem;
+  }
+
+  /* Make section headings smaller and remove left margin */
+  section:not(:first-of-type) h2,
+  section:not(:first-of-type) h3,
+  section:not(:first-of-type) p,
+  section:not(:first-of-type) ul,
+  section:not(:first-of-type) li {
+    margin-left: 0;
+    font-size: 1rem;
+  }
+
+  /* Make images inside sections smaller and fit the screen */
+  section:not(:first-of-type) img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  /* Make buttons in sections smaller and full width */
+  section:not(:first-of-type) .cta-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    margin-left: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* If you use tables for layout, make them stack vertically */
+  section:not(:first-of-type) table,
+  section:not(:first-of-type) tr,
+  section:not(:first-of-type) td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Make the hero section adaptable for phones */
+@media (max-width: 767px) {
+  /* Stack hero text and image vertically on small screens */
+  .hero {
+    display: block; /* Stack elements vertically */
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center; /* Center text for better appearance */
+  }
+
+  .hero-text {
+    margin-bottom: 1.5rem; /* Add space below the text */
+  }
+
+  .hero-image img {
+    max-width: 100%; /* Make image fit the screen */
+    height: auto;    /* Keep image aspect ratio */
+    margin: 0 auto;  /* Center the image */
+    display: block;
+  }
+}
+
+
 
